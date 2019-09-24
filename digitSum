@@ -1,0 +1,9 @@
+#Sum of digits
+#Python 3.0 +
+def digitSum(val):
+    str_val = str(val)
+    sum = 0
+    for char in str_val:
+        value = int(char)
+        sum += value
+    return sum
