@@ -1,0 +1,24 @@
+#Function check value and if it's a palindrome return True, otherwise False
+#Python 3.0+
+def isPalindrome(val):
+    str_val = str(val)
+    len_str = len(str_val)
+    new_len = int(len_str/2)
+    if len_str % 2 == 0:
+        flag = 0
+        for i in range(new_len):            
+            if str_val[i] == str_val[len_str - 1 - i]:
+                flag += 1
+        if flag == new_len:
+            return True
+        else:
+            return False
+    else: #len_str%2 != 0:
+        flag = 0
+        for i in range(new_len):
+            if str_val[i] == str_val[len_str - 1 - i]:
+                flag += 1
+        if flag == new_len:
+            return True
+        else:
+            return False
