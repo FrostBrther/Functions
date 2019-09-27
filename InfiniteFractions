@@ -1,0 +1,24 @@
+#Print square root of two as a infinite continued fractions
+#Python 3.0+
+
+
+#Sum of two fractions
+def fracSum(a,b,c,d):
+    num = a*d + c*b
+    denum = b*d
+    return [num,denum]
+
+#Iterate two fractions
+def iteration(args = []):
+    result = fracSum(2,1,args[1],args[0])
+    return result
+   
+#Print first n fractions the first fraction is 17/12
+#Fractions will be printed as list like a [17,12]
+def printFractions(n):
+  i = 0
+  first = fracSum(2,1,1,2)
+  while i < n:
+    first = iteration(first)
+    result = fracSum(1,1,first[1],first[0])
+    print(result)
